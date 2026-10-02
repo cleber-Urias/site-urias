@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>URIAS Engenharia & Segurança</title>
 <meta name="google-site-verification" content="eEqrqrSAT_FyMHapobzQ9J5XLdF0f9F8WJrUA3ExxA8" />
+<title>URIAS Engenharia & Segurança</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap">
 <style>
   :root{
@@ -205,6 +205,43 @@
   @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .service-card h3{ color:#EAF1F7; } }
   .service-card p{ margin:0; font-size:.9rem; color:var(--text-muted); }
 
+  .services-columns{
+    display:grid; grid-template-columns:1fr 1fr; gap:0;
+    margin-top:36px; background:var(--navy); border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow);
+  }
+  .service-col{ padding:30px 32px; }
+  .service-col + .service-col{ border-left:1px solid rgba(255,255,255,.12); }
+  .service-col-title{
+    font-family:"IBM Plex Mono",monospace; font-size:.78rem; font-weight:600; letter-spacing:.08em;
+    text-transform:uppercase; color:var(--green-2); padding-bottom:12px; margin:0 0 4px;
+    border-bottom:1px solid rgba(255,255,255,.18);
+  }
+  .service-list{ list-style:none; margin:0; padding:0; }
+  .service-item{
+    display:flex; align-items:flex-start; gap:10px; padding:13px 0;
+    border-bottom:1px solid rgba(255,255,255,.08); color:#EAF1F7; font-size:.95rem; line-height:1.35;
+  }
+  .service-item:last-child{ border-bottom:none; }
+  .service-item .check{
+    flex-shrink:0; width:18px; height:18px; border-radius:4px; background:rgba(139,195,74,.18);
+    color:var(--green-2); display:flex; align-items:center; justify-content:center; margin-top:2px;
+  }
+  .service-item .check svg{ width:12px; height:12px; }
+  @media (max-width:760px){
+    .services-columns{ grid-template-columns:1fr; }
+    .service-col + .service-col{ border-left:none; border-top:1px solid rgba(255,255,255,.12); }
+    .service-col{ padding:26px 22px; }
+  }
+
+  .services-group + .services-group{ margin-top:48px; }
+  .service-group-title{
+    font-family:"IBM Plex Mono",monospace; font-size:.8rem; font-weight:700; letter-spacing:.1em;
+    text-transform:uppercase; color:var(--green); margin:0; padding-bottom:10px; border-bottom:2px solid var(--border);
+  }
+  :root[data-theme="dark"] .service-group-title{ color:var(--green-2); border-bottom-color:rgba(255,255,255,.18); }
+  @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .service-group-title{ color:var(--green-2); border-bottom-color:rgba(255,255,255,.18); } }
+  .services-group .card-grid{ margin-top:20px; }
+
   /* segments */
   .segments{ background:var(--navy); color:var(--on-navy); }
   .segments .h2, .segments .eyebrow{ color:#fff; }
@@ -336,6 +373,7 @@
 </head>
 <body>
 
+
 <header class="site">
   <div class="header-row">
     <a class="logo-link" href="#inicio" aria-label="URIAS Engenharia e Segurança - início">
@@ -367,7 +405,7 @@
     <div class="wrap">
       <p class="eyebrow">URIAS Engenharia &amp; Segurança · Consultoria em SST</p>
       <h1>Soluções inteligentes em Engenharia &amp; Segurança<span class="tagline">Protegendo pessoas. Potencializando resultados.</span></h1>
-      <p class="lede">Programas de saúde e segurança (PGR, PPVR, PCA, PCMSO), laudos e documentos técnicos (LTCAT, LI, LP, PPP), treinamentos normativos, assistência técnica em perícias (trabalhistas e previdenciárias). Atuando em segmentos industriais, oficinas e clínicas do interior do Estado de São Paulo.</p>
+      <p class="lede">Programas de saúde e segurança (PGR, PGRTR, PCA, PCMSO), laudos e documentos técnicos (LTCAT, LI, LP, PPP), treinamentos normativos, assistência técnica em perícias (trabalhistas e previdenciárias). Atuando em segmentos industriais, comércio e clínicas do interior do Estado de São Paulo.</p>
       <div class="hero-watermark"><img src="saude-pessoas-resultados.png" alt="" aria-hidden="true"></div>
       <div class="diff-block">
         <p class="diff-heading">Nosso diferencial</p>
@@ -399,10 +437,14 @@
       <h2 class="h2">Quem Somos</h2>
       <div class="about-grid">
         <div>
-          <p>A URIAS Engenharia &amp; Segurança é uma consultoria em Segurança e Saúde no Trabalho, sediada em Araraquara/SP, conduzida por Cléber Urias de Souza, Consultor de Segurança do Trabalho, em parceria técnica com Claudia Regina Roos, Engenheira de Segurança do Trabalho, responsável técnica pelos serviços de engenharia sob sua atribuição.</p>
-          <p>A consultoria atende indústrias, usinas, oficinas mecânicas e instituições de saúde, oferecendo soluções em Segurança e Saúde no Trabalho adequadas às características e necessidades de cada organização.</p>
-          <p>Entre seus diferenciais está a atuação em assistência técnica em perícias trabalhistas e previdenciárias, com análise técnica de processos e documentos, elaboração de quesitos periciais, acompanhamento de perícias e elaboração de pareceres e manifestações técnicas. Essa experiência também contribui para a elaboração de PGR, LTCAT, PPP e demais documentos de SST com critérios técnicos, fundamentação adequada, consistência e rastreabilidade das informações.</p>
-          <p>A URIAS também atua como representante oficial da Rede Brasil NR's nas regiões de Araraquara, Ribeirão Preto, Rio Claro e São José do Rio Preto, disponibilizando programas de treinamento e soluções para proteção contra quedas oferecidos pela rede.</p>
+          <p>A URIAS Engenharia &amp; Segurança atua na área de Engenharia e Segurança do Trabalho, oferecendo soluções técnicas especializadas para organizações que buscam fortalecer a gestão de riscos, atender às exigências legais e promover ambientes de trabalho mais seguros e eficientes.</p>
+          <p>Sediada em Araraquara/SP, a empresa é conduzida por Cléber Urias de Souza, Consultor de Segurança do Trabalho, em parceria técnica com Claudia Regina Roos, Engenheira de Segurança do Trabalho, responsável técnica pelos serviços de engenharia sob sua atribuição.</p>
+          <p>Nossa atuação contempla diferentes segmentos, incluindo indústrias, usinas, oficinas mecânicas, comércio e instituições de saúde, com soluções desenvolvidas de acordo com as particularidades, riscos e necessidades de cada operação. Essa abordagem permite aliar conhecimento técnico, experiência prática e uma visão direcionada à realidade de cada cliente.</p>
+          <p>A experiência adquirida nesse campo também contribui para uma abordagem criteriosa na elaboração do GRO e demais documentos relacionados à Segurança e Saúde no Trabalho, buscando assegurar consistência técnica, fundamentação adequada e confiabilidade das informações.</p>
+          <p>Atuação em assistência técnica em perícias trabalhistas e previdenciárias, abrangendo análise técnica de processos e documentos, elaboração de quesitos, acompanhamento de diligências periciais e elaboração de pareceres e manifestações técnicas.</p>
+          <p>Como parte da expansão de suas soluções, a URIAS Engenharia &amp; Segurança atua como representante oficial da Rede Brasil NR's em Araraquara – SP, e todo interior do estado de São Paulo, disponibilizando treinamentos especializados e soluções voltadas à proteção contra quedas e trabalhos em altura.</p>
+          <p>Mais do que prestar serviços técnicos, a URIAS busca estabelecer parcerias de longo prazo, compreendendo os desafios de cada organização e transformando conhecimento técnico em soluções aplicáveis, responsáveis e alinhadas às necessidades do negócio.</p>
+          <p>URIAS Engenharia &amp; Segurança — conhecimento técnico, experiência e soluções para um ambiente de trabalho mais seguro.</p>
         </div>
         <div class="cert-card">
           <h3>Responsáveis técnicos</h3>
@@ -431,47 +473,126 @@
       <p class="eyebrow">O que a URIAS faz</p>
       <h2 class="h2">Serviços</h2>
       <p class="lede">Do diagnóstico de risco à defesa técnica em juízo — documentação, treinamento e suporte pericial em um só lugar.</p>
-      <div class="card-grid">
-        <article class="service-card">
-          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 8.7 8 11 4.6-2.3 8-6 8-11V5l-8-3Z"/></svg></div>
-          <h3>PGR / PGRTR</h3>
-          <p>Programa de Gerenciamento de Riscos e Programa de Gerenciamento de Riscos no Trabalho Rural, Inventário de Riscos e estruturação do Plano de Ação em conformidade com os Capítulos 1.5 da NR-01 e 31.5 da NR-31.</p>
-        </article>
-        <article class="service-card">
-          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div>
-          <h3>LTCAT</h3>
-          <p>Laudo Técnico das Condições Ambientais do Trabalho, incluindo levantamentos extemporâneos para fins de aposentadoria especial.</p>
-        </article>
-        <article class="service-card">
-          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
-          <h3>PPP</h3>
-          <p>Perfil Profissiográfico Previdenciário integrado ao eSocial e ao histórico de exposição registrado no LTCAT.</p>
-        </article>
-        <article class="service-card">
-          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 3 7v5c0 5 3.8 8.5 9 9 5.2-.5 9-4 9-9V7l-9-4Z"/><path d="m9 12 2 2 4-4"/></svg></div>
-          <h3>Perícias trabalhistas e previdenciárias</h3>
-          <p>Assistência técnica ao empregador: quesitos periciais, laudos de impugnação técnica e pareceres para varas do trabalho.</p>
-        </article>
-        <article class="service-card">
-          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v16M5 9c1.5-2 3-3 7-3s5.5 1 7 3M5 15c1.5 2 3 3 7 3s5.5-1 7-3"/></svg></div>
-          <h3>Ergonomia (AEP/NR-17/AET) e riscos psicossociais</h3>
-          <p>Análise Ergonômica Preliminar e avaliação de fatores de risco psicossociais relacionados ao trabalho (FRPRT).</p>
-        </article>
-        <article class="service-card">
-          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg></div>
-          <h3>Treinamentos de NRs</h3>
-          <p>Capacitações regulamentares em parceria com a Rede Brasil NR's, com carga horária e certificação conforme cada norma.</p>
-        </article>
-        <article class="service-card">
-          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg></div>
-          <h3>Planos de contingência e gestão de crise</h3>
-          <p>PGC - Plano de Gerenciamento de Crise e PCN - Plano de Continuidade de Negócios, estruturado com base nos cenários da organização.</p>
-        </article>
-        <article class="service-card">
-          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 12 2 2 4-4"/><path d="M5 5h14v14H5z"/></svg></div>
-          <h3>Auditoria documental e compliance</h3>
-          <p>Checklists de conformidade nas 38 NRs, estruturação de canal de denúncias e organização documental para fiscalização.</p>
-        </article>
+      <div class="services-group">
+        <p class="service-group-title">Programas de gestão e prevenção</p>
+        <div class="card-grid">
+          <article class="service-card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <h3>GRO / PGR – Programa de Gerenciamento de Riscos Ocupacionais</h3>
+            <p>Inventário de Riscos e estruturação do Plano de Ação em conformidade com o Capítulo 1.5 da NR-01, incluindo a versão rural (PGRTR) conforme a NR-31.</p>
+          </article>
+          <article class="service-card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+            <h3>Programa de Gestão de EPI</h3>
+            <p>Seleção, ficha de controle, treinamento de uso e troca periódica dos Equipamentos de Proteção Individual, conforme a NR-06.</p>
+          </article>
+          <article class="service-card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+            <h3>PCMSO – Programa de Controle Médico e Saúde Ocupacional</h3>
+            <p>Planejamento de exames ocupacionais e acompanhamento da saúde dos trabalhadores conforme os riscos identificados, nos termos da NR-07.</p>
+          </article>
+          <article class="service-card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+            <h3>Programa de Investigação de Acidentes</h3>
+            <p>Apuração de causas-raiz de acidentes e quase-acidentes, com plano de ação para evitar recorrência e subsídio à emissão da CAT.</p>
+          </article>
+          <article class="service-card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg></div>
+            <h3>PPR – Programa de Proteção Respiratória</h3>
+            <p>Seleção, ajuste e uso correto de respiradores, com testes de vedação e controle de troca de filtros para exposições a agentes inalantes.</p>
+          </article>
+          <article class="service-card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
+            <h3>Programa de Gestão de Espaço Confinado</h3>
+            <p>Identificação, sinalização e controle de acessos a espaços confinados, com permissão de entrada conforme a NR-33.</p>
+          </article>
+          <article class="service-card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+            <h3>Programa de Sinalização</h3>
+            <p>Mapeamento e implantação da sinalização de segurança em áreas de risco, rotas de fuga e equipamentos, conforme a NR-26.</p>
+          </article>
+          <article class="service-card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+            <h3>Programa de Gestão de Terceiros</h3>
+            <p>Qualificação documental, integração e acompanhamento de empresas contratadas para garantir conformidade com o PGR do contratante.</p>
+          </article>
+          <article class="service-card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg></div>
+            <h3>Programa de Trabalho em Altura</h3>
+            <p>Análise de Risco, permissão de trabalho e capacitação para atividades acima de dois metros, conforme a NR-35.</p>
+          </article>
+          <article class="service-card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+            <h3>Programa de Bloqueio e Etiquetagem de Fontes de Energias</h3>
+            <p>Procedimentos de bloqueio, travamento e etiquetagem (LOTO) para intervenções seguras em máquinas e equipamentos, conforme a NR-12.</p>
+          </article>
+          <article class="service-card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+            <h3>Programa de Gestão em Ergonomia (AEP/NR-17/AET)</h3>
+            <p>Análise Ergonômica Preliminar e avaliação de fatores de risco psicossociais relacionados ao trabalho (FRPRT).</p>
+          </article>
+          <article class="service-card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="4.93" y1="4.93" x2="9.17" y2="9.17"/><line x1="14.83" y1="14.83" x2="19.07" y2="19.07"/><line x1="14.83" y1="9.17" x2="19.07" y2="4.93"/><line x1="9.17" y1="14.83" x2="4.93" y2="19.07"/></svg></div>
+            <h3>Plano de Gerenciamento de Crise (PGC) e Continuidade de Negócios (PCN)</h3>
+            <p>PGC - Plano de Gerenciamento de Crise e PCN - Plano de Continuidade de Negócios, estruturado com base nos cenários da organização.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="services-group">
+        <p class="service-group-title">Laudos, análises e documentação</p>
+        <div class="card-grid">
+          <article class="service-card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+            <h3>PAE – Plano de Atendimento a Emergência</h3>
+            <p>Procedimentos de resposta a emergências (incêndio, vazamentos, acidentes) integrados ao PGR e testados em simulados periódicos.</p>
+          </article>
+          <article class="service-card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+            <h3>Assistência Técnica em Perícias (Trabalhista e Previdenciária)</h3>
+            <p>Assistência técnica ao empregador: quesitos periciais, laudos de impugnação técnica e pareceres para varas do trabalho.</p>
+          </article>
+          <article class="service-card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+            <h3>LTCAT – Laudo Técnico das Condições Ambientais de Trabalho</h3>
+            <p>Laudo Técnico das Condições Ambientais do Trabalho, incluindo levantamentos extemporâneos para fins de aposentadoria especial.</p>
+          </article>
+          <article class="service-card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div>
+            <h3>DSS – Programa de Diálogo de Segurança</h3>
+            <p>Diálogos periódicos de segurança (DDS/DSS) para reforçar a cultura de prevenção e alinhar os riscos específicos de cada atividade.</p>
+          </article>
+          <article class="service-card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg></div>
+            <h3>APR – Análise Preliminar de Risco</h3>
+            <p>Levantamento dos riscos de uma atividade antes da sua execução, com medidas de controle definidas junto à equipe de campo.</p>
+          </article>
+          <article class="service-card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+            <h3>Laudo de Insalubridade e Periculosidade</h3>
+            <p>Avaliação técnica dos agentes nocivos e condições de risco acentuado, conforme as NR-15 e NR-16, para fins de adicionais legais.</p>
+          </article>
+          <article class="service-card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+            <h3>Capacitação e Treinamento Técnico</h3>
+            <p>Capacitação de usuários para operação segura dos sistemas instalados, conforme as condições da tarefa, com registro e integração ao Databook. Formação de instaladores para sistemas de ancoragem, incluindo Linhas de Vida Horizontais e Verticais.</p>
+          </article>
+          <article class="service-card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg></div>
+            <h3>Diagnóstico Documental de SST</h3>
+            <p>Checklists de conformidade nas 38 NRs, estruturação de canal de denúncias e organização documental para fiscalização.</p>
+          </article>
+          <article class="service-card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><polyline points="17 11 19 13 23 9"/></svg></div>
+            <h3>PPP – Perfil Profissiográfico Previdenciário</h3>
+            <p>Perfil Profissiográfico Previdenciário integrado ao eSocial e ao histórico de exposição registrado no LTCAT.</p>
+          </article>
+          <article class="service-card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></div>
+            <h3>AVCB – Auto de Vistoria do Corpo de Bombeiros</h3>
+            <p>Laudo de vistoria das condições de segurança contra incêndio do imóvel, emitido pelo Corpo de Bombeiros para regularização e licenciamento.</p>
+          </article>
+        </div>
       </div>
     </div>
   </section>
